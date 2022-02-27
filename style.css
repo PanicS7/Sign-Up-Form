@@ -1,0 +1,129 @@
+/* 1. RESETS */
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+/* 2. PAGE CONTAINER */
+.container {
+    width: 100vw;
+}
+  
+/* 3. IMAGE CONTAINER */
+.image-container {
+    background-image: url("./background.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    position: relative;
+    color: #fff;    
+}
+.image-container .image-author {
+    background: rgba(24, 24, 24, 0.6);
+    padding: 1rem;
+}
+.image-container a {
+    color:rgb(148, 207, 255);
+}
+/* 4. text inside image-container */
+.text-container {
+    display: flex;
+    align-items: center;
+    background: rgba(24, 24, 24, 0.6);
+    width: 100vw;
+    padding: 1rem 0;
+    justify-content: center;
+}
+.text-container h1 {
+    font-size: 2.5rem;
+}
+.logo-container {
+    margin: 0 0.5rem;
+}
+.logo-container img {
+    width: 4rem;
+    height: 4rem;
+}
+.logo-container h1 {
+    font-size: 3rem;
+}
+.image-author {
+    position: absolute;
+    bottom: 1rem;
+}
+
+/* 5. FORM CONTAINER */
+.form-section {
+    background-color: rgb(148, 207, 255);
+    padding: 2rem 0;
+}
+.form-container header { 
+    padding: 1rem;
+    max-width: 75ch;
+}
+.form-field {
+    background-color: #fff;
+    padding: 2rem 1rem;
+}
+.form-field input:focus {
+    outline-color: #00f;
+}
+.form-field input:invalid {
+    outline-color: #f00;
+}
+.form-field h2 {
+    margin-bottom: 1rem;
+}
+.form-field .hidden {
+    display: none;
+    color: #f00;
+}
+#signUpForm { 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+}    
+
+/* 6. BUTTON CONTAINER */
+.button-container {
+    padding: 1rem;
+}
+.button-container button {
+    background-color: rgb(1, 105, 24);
+    border: 0;
+    border-radius: 0.5em;
+    padding: 0.7rem 1.2rem;
+    color: #fff;
+    cursor: pointer;
+}
+.button-container button:hover {
+    opacity: 0.8;
+}
+
+/* tablets width 768px */
+@media (min-width: 768px) {
+    #signUpForm { 
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* laptop and pc 1024px */
+@media (min-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 3fr 6fr;
+    }
+    .text-container {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+    .form-container header, .form-field, .button-container {
+        padding: 1rem 2rem;
+    }
+}
