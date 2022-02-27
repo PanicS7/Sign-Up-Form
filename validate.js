@@ -10,7 +10,6 @@ document.getElementById("signUpForm").addEventListener("submit", (event) => {
 
     
     if (password !== confirmPassword) {
-        
         [...message].map(elem => {
             elem.style.display = "block";
         })
